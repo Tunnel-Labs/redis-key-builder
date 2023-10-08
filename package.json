@@ -1,0 +1,13 @@
+{
+  "name": "redis-key-builder",
+  "type": "module",
+  "exports": "./src/index.ts",
+  "dependencies": {
+    "change-case": "^5.0.2",
+    "type-fest": "^4.4.0"
+  },
+  "devDependencies": {
+    "lionconfig": "^3.1.1",
+    "typescript": "^5.2.2"
+  }
+}
