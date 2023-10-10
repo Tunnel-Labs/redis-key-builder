@@ -1,13 +1,27 @@
 {
-  "name": "redis-key-builder",
-  "type": "module",
-  "exports": "./src/index.ts",
-  "dependencies": {
-    "change-case": "^5.0.2",
-    "type-fest": "^4.4.0"
-  },
-  "devDependencies": {
-    "lionconfig": "^3.1.1",
-    "typescript": "^5.2.2"
-  }
+	"name": "redis-key-builder",
+	"type": "module",
+	"exports": {
+		".": {
+			"types": "./dist/index.d.ts",
+			"import": "./dist/index.mjs",
+			"require": "./dist/index.cjs"
+		}
+	},
+	"files": [
+		"dist"
+	],
+	"scripts": {
+		"build": "unbuild"
+	},
+	"dependencies": {
+		"change-case": "^5.0.2",
+		"type-fest": "^4.4.0"
+	},
+	"devDependencies": {
+		"desm": "^1.3.0",
+		"lionconfig": "^3.1.1",
+		"typescript": "^5.2.2",
+		"unbuild": "^2.0.0"
+	}
 }
