@@ -1,4 +1,4 @@
-import { camelCase } from 'change-case';
+import * as changeCase from 'change-case';
 import type { KeySchemaToKeyMap } from '../types/key.js';
 
 function createSubschemaValue({
@@ -32,7 +32,7 @@ function createSubschemaValue({
 		}
 
 		// @ts-expect-error: we want to be able to assign arbitrary properties
-		subschemaValue[camelCase(key)] = createSubschemaValue({
+		subschemaValue[changeCase.camelCase(key)] = createSubschemaValue({
 			pathParts: [...pathParts, key],
 			subschema: value
 		});
