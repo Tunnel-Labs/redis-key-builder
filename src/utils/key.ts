@@ -1,5 +1,5 @@
 import { camelCase } from 'change-case';
-import type { KeySchemaToKeyMap } from '~/types/key.js';
+import type { KeySchemaToKeyMap } from '../types/key.js';
 
 function createSubschemaValue({
 	pathParts,
