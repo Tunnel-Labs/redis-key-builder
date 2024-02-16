@@ -1,7 +1,7 @@
 import type { CamelCase } from 'type-fest';
 
 export type KeySchemaToKeyMap<KeySchema extends Record<string, any>> =
-	string & {
+	{ toString(): string } & {
 		[K in keyof KeySchema as K extends `[${string}]`
 			? never
 			: CamelCase<K>]: KeySchema[K] extends boolean
